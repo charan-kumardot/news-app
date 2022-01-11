@@ -6,15 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsdataService {
-  baseUrl = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=ef82c26221634825b75fe55552185178'
+  baseUrl = 'https://gnews.io/api/v4/top-headlines?token=07ba7258999f2c5436c3298dbe8b438e&lang=en'
   constructor(private http:HttpClient) { }
   news():Observable<any>{
   return this.http.get(this.baseUrl)
   }
   newsBuisness():Observable<any>{
-  return this.http.get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=ef82c26221634825b75fe55552185178")
+  return this.http.get('https://gnews.io/api/v4/search?q=Microsoft&token=07ba7258999f2c5436c3298dbe8b438e&lang=en')
+
   }
   newsSports():Observable<any>{
-    return this.http.get("https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=ef82c26221634825b75fe55552185178")
+    return this.http.get("https://gnews.io/api/v4/search?q=Cricket&token=07ba7258999f2c5436c3298dbe8b438e&lang=en")
     }
 }

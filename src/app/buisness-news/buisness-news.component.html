@@ -4,7 +4,7 @@
     <h2>Top Headlines</h2>
     <div class="row">
         <div class="col-lg-3 card mt-3 mb-3 ml-3 ml-lg-2" *ngFor="let n of news.articles"><br><br>
-            <figure><img class="card-img-top" src="{{ n.urlToImage }}" alt="Card image cap" width="100%"></figure>
+          <figure><img class="card-img-top" src="{{ n.image }}" alt="Card image cap" width="100%"></figure>
                 <div class="card-body">
                   <b><h5 class="card-title">{{ n.title }}</h5></b>
                   <p class="card-text">{{ n.description }}</p>
