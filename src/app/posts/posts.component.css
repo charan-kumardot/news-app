@@ -1,0 +1,19 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+ figure {
+    background: #1abc9c;
+  }
+ figure img {
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+figure:hover img {
+    opacity: .5;
+  }
+  .container{
+      background-image: url('/src/assets/images/pexels-suzy-hazelwood-3886870.jpg');
+  }

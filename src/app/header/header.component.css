@@ -1,0 +1,80 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: darkcyan;
+}
+.searc-bar{
+    justify-content: center;
+}
+
+.Hover-effect:hover{
+    transform:  translateY(-3px) scale(1.01);
+
+}
+.Hover-effect:hover img{
+    transform:  translateY(-5px) scale(1.02);
+    box-shadow: 10px 9px 17px -10px rgba(0,0,0,0.28);
+}
+img{
+    max-width: 100%;
+    transition: all 0.7s ;
+}
+h2{
+    font-size: 1.55rem;
+}
+
+.wrapper{
+    padding: 0 1rem;
+    padding-top: 92px;
+    margin-bottom: 69px;
+    box-shadow: 10px 9px 17px -10px rgba(0,0,0,0.28);
+    background-color: gray;
+    padding: 20px;
+
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px,1fr));
+    grid-gap:2rem;
+}
+.news__card{
+    transition: all 0.3s ;
+    text-decoration: none;
+    color: rgb(29, 25, 25);
+
+    background-color: white;
+    padding: 20px;
+}
+.news__card:hover{
+    box-shadow: 0 3px 3px rgba(0,0,0,0.16), 0 3px 3px rgba(0,0,0,0.23);
+}
+
+
+.Hover-effect {
+    position: relative;
+}
+:root{
+    --underline_color: red;
+    --underline-hight:0.175rem;
+}
+.Hover-effect::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--underline-hight);
+    background-color: var(--underline_color);
+    left: 0;
+    bottom: 0;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+
+
+.Hover-effect:hover::after {
+    transform: scale(1, 1);
+}
